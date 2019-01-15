@@ -9,7 +9,7 @@ import {
   ListItem,
   Form,
   Label,
-  Input,
+  Input, 
   Item,
   Content,
   Header
@@ -53,10 +53,10 @@ class Login extends Component {
               </Form>
             </Body>
           </ListItem>
-          <Button full success>
+          <Button full success onPress={() => this.props.navigation.navigate("ListScreen")} >
             <Text>Login</Text>
           </Button>
-          <Button full warning>
+          <Button full warning onPress={() => this.props.navigation.navigate("ListScreen")}>
             <Text>Register</Text>
           </Button>
         </List>

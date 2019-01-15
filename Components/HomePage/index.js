@@ -13,13 +13,17 @@ import CoffeeCart from "../CoffeeCart";
 import CoffeeDetail from "../CoffeeDetail";
 import Login from "../Login";
 
+// Navigator
+
+import NavContainer from "../Navigation/index";
+
 class HomePage extends Component {
   render() {
     return (
       <Container style={styles.transparent}>
         <View style={styles.overlay} />
         <Header style={styles.transparent} />
-        <CoffeeCart />
+        <NavContainer />
       </Container>
     );
   }

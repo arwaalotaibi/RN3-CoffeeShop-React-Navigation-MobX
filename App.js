@@ -3,6 +3,7 @@ import Expo, { AppLoading } from "expo";
 
 // Component
 import HomePage from "./Components/HomePage";
+import index from "./Components/Navigation/index"
 
 class App extends React.Component {
   constructor() {

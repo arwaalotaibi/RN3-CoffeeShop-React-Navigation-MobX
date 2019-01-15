@@ -7,12 +7,14 @@ import {
   Text,
   Button,
   Left,
+  Icon,
   Body,
   Right,
   List,
   ListItem,
   Picker,
-  Content
+  Content,
+ 
 } from "native-base";
 
 // Style
@@ -41,11 +43,23 @@ class CoffeeDetail extends Component {
       option: value
     });
   }
+  static navigationOptions = ({navigation}) => {
+    return {
+      title: navigation.getParam("coffee").name,
+      headerRight :(
+        <Button>
+        <Icon 
+        type = "EvilIcons"
+        name = "cart"
+        onPress = { ()=> navigation.navigate("CoffeeCart") }
+        />
+        </Button>
+      )
+    }
+  }
 
   render() {
-    const coffeeshops = CoffeeStore.coffeeshops;
-    if (!coffeeshops) return <Content />;
-    const coffeeshop = coffeeshops[0];
+  let coffeeshop = this.props.navigation.getParam("coffee")
     return (
       <Content>
         <List>
